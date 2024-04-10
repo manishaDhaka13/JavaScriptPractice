@@ -1,0 +1,388 @@
+javascript is dynamic weekly type programming language
+it's a scripting language
+we use javascript to add functionality on webpage
+to make website dynamic
+it means we can change type of a variable at run type etc
+we don't tightly bound variable with data type when we decleare it like C java that's why it is
+weekly type
+
+we add javacript in html file with script tag like
+
+<script>javscript code</script>
+
+or
+we add outside .js file like
+
+<script src="path" defer></script>
+
+we use defer keyword to tell browser to download .js file but execute it whwn html file got downloaded.
+in this we don't write anything between script tag.
+
+LET AND CONST
+
+we use let keyword to declare a variable
+
+let firstName;
+rules:
+it can have character number $ \_;
+we normally use camelcase for it lastName;
+it can't start with number;
+
+const keyword is use to declare a constant it value does not change
+
+const a=10;
+
+we declare string in "" or '' or ``
+
+`` are use for dynamic string
+
+let s=`${numberEnterd}+10`
+
+htre this called template literal
+we print dynamic value of variable by using $ sign
+
+like if we numberEnterd is 50 the s will be printed as
+50+10;
+
+it will printed as string and not calulate it + is considerd in string
+
+we can write in next line in `` string
+
+string using "" or ''
+
+let s='my number' +numberEnterd+'in physics';
+we use + to concatinate in string
+the numberEnterd here will be the variable
+and after it take as string and got concatinate';
+
+ARRAY
+
+let a=[2,5];
+
+object
+
+let b={name='mani',
+age=30};
+
+More on Text (String) Comparisons
+Strings can also be compared with greater than (>) or lower/ smaller than (<) operators.
+
+JavaScript compares strings based on standard lexicographical ordering, using Unicode values.
+
+That means that b is greater than a for example.
+
+JavaScript always looks at the first character and only considers other characters if the first character is similar. In addition, capital characters are considered to be smaller than lowercase characters.
+
+See these examples:
+
+'ab' > 'aa' // true
+'a' > 'B' // true
+'a' > 'b' // false
+
+<progress></progress>
+
+we use progress tag in html to show the progress of a process
+it has max and value as attribute;
+we can also connect it with lable;
+The <progress> tag represents the completion progress of a task.
+
+Tip: Always add the <label> tag for best accessibility practices!
+<label for="file">Downloading progress:</label>
+<progress id="file" value="32" max="100"> 32% </progress>
+
+we use prompt() function to take input value from user'
+this function return the input of user in string.
+
+const a =prompt('enter a no','100'); the 100 will be like a default value/placeholder
+b=parseInt(a)
+
+for(const el of array){}
+for(const key in object) {
+
+}
+
+in above for of and for in loop the const got dump after avery iteration and then the new const got created
+that's why we can use const here.
+
+for(let i=0;i<8;i++>)
+{
+
+}
+in this the i has scope in loop only and i value got change after every iteration so we use let here'
+
+Math.random();
+it create a random no.
+
+var vs let vs const
+
+var create a variable available on globel scope or in function
+
+let create variable available on block scope means the variable created between{}
+
+let crate variable on globel scope or block scope
+const crate a constant on globle scope or block scope
+
+{
+let name="mani";
+}
+
+console.log(name);
+
+it will give error beacuse we are accessing it out of it's scope;
+
+if(name===mani){
+let i="pnd";
+}
+i will be available on if block
+{
+var name="mani";
+}
+
+console.log(name);
+
+mani will be output because var create the name varible in globle scope ,there is no function.
+
+if(name===mani){
+let i="pnd";
+}
+i will be avialble on if block;
+
+let or const are included in ES6;
+they are not in older version
+
+let name="mani";
+let name="nisha";
+it will give error beacuse you can't declare same variable with let or const in same scope;
+
+var name="mani";
+var name="nisha";
+it will not give error because with var we can create variable in same scope
+
+let obj={}; we create key value plaue in object so the obj will have the scope not key pair;
+
+HOISTING : javascipt has a special feature hoisting ;it go all the page and register all the script
+
+console.log(name);
+var name="mani";
+
+the browser change it to= var name;
+console.log(name);  
+ name="mani";
+
+                                         it will not give error because the browser initalised it with undefined
+
+
+
+                                         but in                console.log(name);
+                                                               let name="mani";
+                                                               will give error
+
+
+                                                               because browser does convert it to   let name;
+                                                                                                    console.log(name);
+                                                                                                    name="mani";
+
+                                                                                                     but it will not initailised it with "undefined";
+
+if we write  
+ name="mani"
+console.log(name);
+
+it will not give error because javascript is forgiving language it will get converted into
+
+var name="mani";
+
+but we should avoid writing like this.
+
+javascipt will not be forgiving if we on the strict mode;
+we can apply strict mode by this
+
+"use strict";
+
+
+
+primitive abd refernce data
+
+
+premitive value are number,string,boolian ,undefine ,null ,symbol
+
+in primitive value the copy of value stored
+
+let x=120;
+let y=x;
+console.log(y);
+
+the result will be 20;
+
+because in y the copy of value of x got stored;
+
+
+in refernce the refernce /address of it stored
+refernce are array ,object;
+
+let a=["book","joo"];
+let b=a;
+then in b the address of a wil be stored;
+a.push("up);
+
+console.log(b);
+the output will be ["book","joo","up"]
+
+
+const a=["book","joo"];
+const b=a;
+then in b the address of a wil be stored;
+a.push("up);
+console.log(b);
+the output will be ["book","joo","up"];
+
+a and b are const and they have address to array that's not changing so it will not give error 
+but if we do it like below:
+a=["book","joo","up"];
+
+it will give a error because here a is const and we are assigning a new array /new address it.
+
+let person={name:'mani',
+            age:30};
+let person2={name:'mani',
+            age:30};
+
+if(person===person2)
+true ;
+else false;
+
+it will give false ;
+because in person and person2 the different address are stored;
+person.name==person2.name;
+it will be true because here we are comparing value;
+
+const person={name:'mani',
+            age:30};
+const person2=person;
+it will store the address that is stored in person to person2
+so if person2.age=32;
+then person=person2={name:'mani',
+            age:32};
+
+
+to store the just key pair value in new object the syntax will be    {...obj}
+
+const person={name:'mani',
+            age:30};
+const person2={...person};
+
+now the new obj will be created with the same key pair value and it's address will be saved in person2;
+
+so person===person2 will be false;
+
+or in array 
+let a=[...array]
+
+this ... is called spread operartor
+
+
+we can also defint the default valu like this
+
+const f=(a,b=default_value)=>{}'
+f(a);
+
+if we don't pass the argument for b in this function it will not give error but because b is undefine it take the b=default_value;
+
+to take many argument we can pass argument in array like this
+
+const sumapp=(number)=>{
+let sum=0;
+for(const num of number)
+{sum=sum+num;}
+};
+
+sumapp([2,4,5,6]);
+
+or we can make the array of passing value with the help of... here it is rest parameter
+it will take all the extra value and make a array of them
+
+const sumapp=(...number)=>{
+let sum=0;
+for(const num of number)
+{sum=sum+num;}
+};
+
+sumapp(2,4,56,80);
+
+when we make the function keyword we have a special in-built javascript variable which store all the arguments in a array this is known as argument;
+
+const f=function(){ 
+
+                 let sum=0;
+for(const num of arguments)
+{sum=sum+num;}
+};
+
+f(2,3,4,5,6,7,8);
+FUNCTION :
+
+ we can also create function like this:
+
+const f=function start(a,b){
+                            console.log('hi');
+                           };
+
+here the function start's address will be stored in f and f will be globaly available not the function with start name,here the function is define as a expression we are assiogning it to 
+ f;
+start will not be globely available so we called the function with f;
+
+    f(a,b);
+
+we can also not write the function name because we are not able to access it with it;
+const f=function(a,b){
+                            console.log('hi');
+                           };
+
+we can also write it inside like this:
+
+addbtn.addEventListener("click",function(a,b){
+                            console.log('hi');
+                           });
+
+
+we call these kind of function anonymonus function;
+when we write like this it's necessary to define f before we call it unless it give a error;
+
+
+
+
+const name=prompt("write a no".'100').toUpperCase;
+
+it will convert the user input in uppercase;
+
+
+ARROW FUNCTION
+
+when we write function as expression then we also can create them like this
+
+const f=(a,b)=>{ console.log('hi');
+                           });
+
+it's called arrow function if there is only one staatement in function we can omit the {} ; 
+const f=(a,b)=>a=b;   this will always have a invisible return    :return(a+b);
+
+if we have just one argument we can omit()
+
+const f=a=>{console.log(a);
+            return a};
+
+if we have no argument then we also have to write ()
+const f=()=>{console.log("hi");
+                 console.log("hi");};
+            
+
+
+
+function and array are also type of object.
+function are also object(store as object)
+
+
+
+
+
+

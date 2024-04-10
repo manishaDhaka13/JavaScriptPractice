@@ -1,0 +1,115 @@
+private and public 
+
+we use # in javascript to make the property/method of class/function private
+the private property/method can only use in that class/function
+they are not used outside of class/function which they are part of
+
+
+
+public property/method can be used anywhere
+
+
+
+
+
+
+inheritence 
+
+
+to have the property/method of a class to be in other class
+ used inheritence
+ to share the same logic in other class
+
+ the class which inheritence the other class is called 
+ sub class and the class that got inherited is called base 
+ we can also overwrite property of base class in subclass 
+
+ in javascript one class can only extends(inherite) one class
+
+ we inheritence in javascript using extends keyword
+
+ class Name{
+    firstName;
+ }
+
+ class FullName extends Name{
+    lastName;
+    name(){
+        console.log(this.firstName+this.lastName);
+    }
+ }
+
+ here the FullName is subclass
+   Name is base class
+
+   the class FullName also have property firstName because 
+   it extends class Name;
+
+   here javascript automatically called constructor of base class
+   then the constructor of subclass when we create the object using
+   instane of class (new FullName());
+
+   the property of base class get added first then the property of subclass get added
+   (after base class field of subclass get converted into property of instance)
+
+
+   if we use our own constructor in base class then 
+   we havt to initiate the base class first using super();
+   super() called the constructor of base class.
+
+   we can't use this.subclassobject before calling super() in subclass constructor
+   because they got added after super();
+
+
+
+in behind the scene class are basically constructor function.
+
+we can make constructor function like this 
+
+function NameConst(first,last){
+ 
+  this.firstName=first;
+  this.lastName=last;
+  this.method=function(){
+    console.log(this.firstName+this.lastName);
+  }
+ 
+}
+
+const name=new NameConst("mani","dhaka");
+name.mehod();
+
+
+when we call this function like this NameConst();  it behave like a normal function
+but when we call this function using new then it will act like a construcor function
+the new here create a new object and add all the property written in funcion in that object
+
+function NameConst(first,last){
+  //  this={};    //comment behind the scene new keyword do this
+  this.firstName=first;
+  this.lastName=last;
+  this.method=function(){
+    console.log(this.firstName+this.lastName);
+  }
+ // return this;   new keyword do this
+}
+
+the above code will be equalliant to below code the class below is called syntactical suger for the above construcor function
+because class are easy to write
+
+class NameConst{
+    construcor(first,last){
+         this.firstName=first;
+         this.lastName=last;
+         this.method=function(){                              // the method is store in field
+             
+      console.log(this.firstName+this.lastName);  
+         }
+    }
+   
+}
+const name=new NameConst("mani","dhaka");
+name.method();
+
+ 
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" cotent="width=device-width,initial-scale=1.0" />
+    <title>working with object</title>
+    <link href="assets/style/style.css" rel="stylesheet" />
+    <script src="assets/script/vendor.js" defer></script>
+    <script src="assets/script/app.js" defer></script>
+    <!-- <script src="assets/script/appp.js" defer></script> -->
+  </head>
+
+  <body>
+    <main class="container grid-1-col">
+      <section class="add-movie-section" id="add-Movie-Section">
+        <div class="user-input fav-movie-box">
+          <label for="fav-movie" class="subheading">favorite movie</label>
+          <input id="fav-movie" type="text" />
+        </div>
+        <div class="user-input name">
+          <label for="fav-movie-name" class="subheading"
+            >Extra Information (Name)</label
+          >
+          <input id="fav-movie-name" type="text" />
+        </div>
+        <div class="user-input value">
+          <label for="fav-movie-value" class="subheading"
+            >Extra information (value)</label
+          >
+          <input id="fav-movie-value" type="text" />
+        </div>
+
+        <button id="add-movie-btn">Add Movie</button>
+      </section>
+      <section>
+        <div class="user-input filter-box">
+          <label for="filter-movie" class="subheading">filter by title</label>
+          <input id="filter-movie" type="text" />
+        </div>
+        <button id="search-btn">Search</button>
+      </section>
+
+      <ul id="movie-list"></ul>
+      <!-- <ul id="filter-list"></ul> -->
+    </main>
+  </body>
+</html>

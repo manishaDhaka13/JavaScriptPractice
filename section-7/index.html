@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Movie App</title>
+    <link href="style/style.css" rel="stylesheet" />
+    <script src="script/app.js" defer></script>
+  </head>
+
+  <body>
+    <div id="backdrop"></div>
+    <header id="main-header">
+      <h2>favorite movies</h2>
+      <button id="add-movie">add movie</button>
+    </header>
+    <section id="database section">
+      <div id="discription">your personal movie database!</div>
+      <ul id="unorderd-list"></ul>
+    </section>
+    <div id="add-movie-section">
+      <div id="add-movie-box">
+        <div id="user-input-box">
+          <label for="movie-title">Movie title</label>
+          <input type="text" id="movie-title" />
+          <label for="image-url">Image URL</label>
+          <input type="text" id="image-url" />
+          <label for="your-rating">Your Rating</label>
+          <input type="number" id="your-rating" />
+        </div>
+        <div id="action-box">
+          <button class="btn" id="btn-cancel">cancel</button>
+          <button class="btn" id="btn-success">add</button>
+        </div>
+      </div>
+    </div>
+    <section id="delete-movie-section">
+      <div id="delete-movie-box">
+        <header id="delete-header">Are you sure?</header>
+        <p>Are you want to delete this item it can't be undone</p>
+        <div class="btn-box">
+          <button class="btn" id="delete-cancel">no(cancel)</button>
+          <button class="btn" id="delete-yes">yes</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

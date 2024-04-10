@@ -1,0 +1,77 @@
+class is a syntactical suger means behind the scene thay are constructor 
+function and use of prototype
+
+whetever is written in constructor function and then we create a object based on instanceof,
+it's same like creating a object based on class
+the constructor method in class contain all written in constructor
+function
+
+constructor function are created as normal function
+but to create a object based on it we have to call it with
+new keyword
+
+const obj=new constructor function();
+
+
+function are also object
+
+constructor function/class has a prototype property(automatically by javascript )
+and it is assigned to the instance based on it
+every object that created on construcor function have the constructor
+prototype property as their property;
+prototype are also object
+prototype is a fallback object that is connect with object
+
+obj.__proto__
+
+every object have the __proto__ property
+
+
+when we don't find a property on a object then it search 
+that property in __proto__;
+prototype is like a fallback object we can find/use the propery 
+in it for the object whose property it is;
+
+when a class inherit the other class then the base class object
+is the __proto__ property value;
+with this it became a chain 
+the last prototype is a global object;
+if the property/methd not find in this chain then for property it's undefine
+and for method it's throw a error 
+and we can always use property from base class
+base class has their own prototpe
+
+
+every function(only fuction) in javascript also has prototpe property
+with we can define __proto;
+
+objFunction/class.prototype===obj.__proto__(true);
+
+the fallback object is __proto__;
+means we serch the property in __proto__
+
+when we extend a class then the subclass has 
+the prototype property which stroed the base class
+that is got stored of __proto__ property of object which is created 
+in that subclass
+
+class/function also has __proto__ property
+and the property/method always search in__proto__
+not in prototype property;
+prototype property just assign the value of __proto__ property of 
+object based on it
+
+class.__proto__ is not equal to obj.__proto__
+
+
+fallback object is always __proto__
+javascript always search property/method in __proto__ after it's own object(in which it is created)
+
+when we write function in using shorthend method that it'
+indication for javascript to just store it once (it's strord in 
+prototype of class ) so it can be shared on all the instance/object of that class;
+
+when we don't use shortend to create method then it store 
+again (take memory) every time we create a instance;
+(property = method);
+

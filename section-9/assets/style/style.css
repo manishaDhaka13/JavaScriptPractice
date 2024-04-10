@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80rem;
+  margin: 3rem auto;
+  /* background-color: aqua; */
+}
+
+.grid-1-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.subheading {
+  display: block;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+.add-movie-section {
+  display: grid;
+  grid-template-columns: 4fr 4fr 0.5fr;
+  row-gap: 1rem;
+}
+.fav-movie-box {
+  grid-column: 1/-1;
+}
+
+#add-movie-btn {
+  grid-row: 3/4;
+  display: flex;
+  background-color: rgba(255, 0, 98);
+  border: none;
+  justify-self: start;
+  padding: 1rem;
+  margin-left: 1rem;
+  color: white;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.8rem;
+  border-radius: 9px;
+  width: 15rem;
+  height: 5rem;
+}
+
+#add-movie-btn:hover {
+  background-color: rgba(255, 0, 98, 0.836);
+}
+.user-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 4rem;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  color: grey;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(255, 7, 251);
+}
+
+section {
+  box-shadow: 0 0 5px 2px #0000001c;
+  border-radius: 9px;
+  padding: 2rem;
+}
+
+#search-btn {
+  background-color: rgba(255, 0, 98);
+  border: none;
+
+  color: white;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.8rem;
+  border-radius: 9px;
+  width: 12rem;
+  height: 5rem;
+}
+
+#search-btn:hover {
+  background-color: rgba(255, 0, 98, 0.836);
+}
+
+.filter-box {
+  padding-left: 0;
+}
+
+#movie-list,
+#filter-list {
+  display: none;
+  list-style: none;
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(255, 0, 200);
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 0 5px 2px #0000001c;
+  border-radius: 9px;
+  padding: 2rem;
+}
+
+#movie-list.visible,
+#filter-list.visible {
+  display: flex;
+}

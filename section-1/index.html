@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF_8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics</title>
+    <link href="calc.css" rel="stylesheet" />
+    <script src="vendor.js" defer></script>
+    <script src="app.js" defer></script>
+    <!-- we use defer keyword to tell browser to download js file but execute it after it download html file
+    so the dependency of js file like button etc. are already avialable
+  with   async keyword it execute js file when the downloading for js file complete without waiting
+using these keywords we save execution time  -->
+  </head>
+  <body>
+    <header>
+      <h1>the unconventional calculator</h1>
+    </header>
+    <section>
+      <div class="calci container">
+        <div class="input-box">
+          <div class="input-number">
+            <input type="number" id="input-number" />
+          </div>
+
+          <div class="input-button">
+            <button class="btn" id="add-btn">+</button>
+            <button class="btn" id="subtract-btn">-</button>
+            <button class="btn" id="multiply-btn">*</button>
+            <button class="btn" id="divide-btn">/</button>
+          </div>
+        </div>
+        <div class="result-box">
+          <p class="result-text" id="result-text">Result: 0</p>
+          <p class="result" id="result">0</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <script src="app.js"></script> -->
+    <!-- we can write script tag in head or body section -->
+    <!-- when we add js file in end it take more time to load html and js  -->
+  </body>
+</html>
